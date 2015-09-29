@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Workers  information</title>
+	<meta charset="utf-8" />
+</head>
+
+
+<body>
+    <div id="员工信息列表" class="section first" style="float:left; width: 70%;">
+        <h2>Workers Information</h2>
+        <table border="1" id="AllWorkers" bgcolor="lightblue">
+            <!--<tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Position </th>
+                <th>Employed Date</th>
+            </tr>-->
+        </table>        
+    </div>
+
+    <div id="功能应用" class="section last" style="float:left;">
+        <div id="AddContent" style=" color: darkcyan; border: 1px solid gray">
+            <hr />
+            <h4>Add or Update one worker information here.</h4>
+            <p> Id:* <input type="text" name="AddId" size="15" /></p>
+            <p>Name:* <input type="text" name="AddName" size="15" /></p>
+            <form>
+                Gender:*
+                female<input type="radio" name="AddSex" value="female" />
+                male<input type="radio" name="AddSex" value="male" />
+            </form>
+            <p>Age:* <abbr title="Between 18-60"><input type="text" name="AddAge" size="15" /></abbr></p>
+            <form>
+                Department:*
+                <select name="AddDepartment">
+                    <option value="JS">技术中心</option>
+                    <option value="RF">软服中心</option>
+                    <option value="CS">创设中心</option>
+                </select>
+            </form>
+            <p></p>
+            <form>
+                Position:*
+                <select name="AddPosition">
+                    <option value="staff">职员</option>
+                    <option value="manager">经理</option>
+                    <option value="director">主管</option>
+                </select>
+            </form>
+            <!--有问题-IE10时间选项-->
+            <p>EmployedDate: <input type="date" name="AddEmployedDate" /></p>
+            <p>
+                <input type="button" value="Add" onclick="addworker()" />
+                <input type="button" value="Update" onclick="updateworker()" />
+                (带*标志的内容为必选项)
+            </p>
+        </div>
+        <div>
+            <hr />
+            <h4>Search</h4>
+            <p>
+                By Id: <input type="text" id="workerId" size="9" />
+                <input type="button" value="Submit" onclick="find()" />
+            </p>
+            <p id="SearchResult"></p>
+            <p></p>
+        </div>
+    <!--</div>
+            tyz © DateTime.Now.Year.ToString()
+    <div>-->
+
+    </div>
+    <!--<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>-->
+    <script src="scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/WorkersWebAPI_Tyz.js"></script>
+</body>
+</html>
