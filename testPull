@@ -1,0 +1,2 @@
+Enter file contents here
+忽略的文件是通过在项目的目录中添加一个.gitignore 文件实现的, 因此也要将.gitignore 加入忽略文件列表中.
