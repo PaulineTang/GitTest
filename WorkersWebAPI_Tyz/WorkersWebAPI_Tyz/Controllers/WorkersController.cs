@@ -26,7 +26,7 @@ namespace WorkersWebAPI_Tyz.Controllers
         [ResponseType(typeof(Worker))]
         public IHttpActionResult GetWorker(int id)
         {
-            Worker worker = db.Workers.Find(id);
+            Worker worker = db.Workers.Find(id);//按主键获取一个实体
             if (worker == null)
             {
                 return NotFound();
@@ -54,7 +54,7 @@ namespace WorkersWebAPI_Tyz.Controllers
 
             try
             {
-                db.SaveChanges();
+                db.SaveChanges();//用于将实体的改变保存到数据库
             }
             catch (DbUpdateConcurrencyException)
             {
