@@ -19,6 +19,8 @@ namespace WorkersWebAPI_Tyz.Controllers
         // GET: api/Workers
         public IQueryable<Worker> GetWorkers()
         {
+            //int num1 = db.Workers.Count(p=>p.Gender == "female");
+            //long num2 = db.Workers.LongCount(p => p.Gender == "male");
             return db.Workers;
         }
 
