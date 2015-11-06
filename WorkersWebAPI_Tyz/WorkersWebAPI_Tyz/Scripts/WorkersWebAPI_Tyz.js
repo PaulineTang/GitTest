@@ -54,8 +54,10 @@ function addworker() {
     var employeddate = $('#AddContent input[name="AddEmployedDate"]').val();
     //var item = id + ' ' + name + ' ' + gender + ' ' + age + ' ' + department + ' ' + position + ' ' + employeddate;
     //alert("添加员工信息：" + item + "\n");//使用confirm
-    confirm_ = confirm('This action will add one new worker informatiom!'+"\n"+ 'Are you sure?');
-    if (confirm_) {
+    if (id!="")
+    {
+        confirm_ = confirm('This action will add one new worker informatiom!' + "\n" + 'Are you sure?');   
+        if (confirm_) {
         var workerData = '{"Id":"' + id + '","Name":"' + name + '","Gender":"' + gender + '","Age":"' + age + '","Department":"' + department + '","Position":"' + position + '","EmployedDate":"' + employeddate + '"}';
         //var workerData = {
         //    "Id": id,
@@ -82,6 +84,9 @@ function addworker() {
             }
         });
     }
+    }
+    else
+        alert("Please add new worker imformation!");
 }
 //根据查询Id删除对应的员工信息
 function deleteworker() { 
@@ -102,7 +107,7 @@ function deleteworker() {
         });
     }  
 }
-//根据id更新员工数据
+//根据id更新员工数据_后续补充id原本不存在的情况
 function updateworker() {
     var id = $('#AddContent input[name="AddId"]').val();
     var name = $('#AddContent input[name="AddName"]').val();
@@ -111,6 +116,7 @@ function updateworker() {
     var department = $('#AddContent select[name="AddDepartment"]').find("option:selected").val();
     var position = $('#AddContent select[name="AddPosition"]').find("option:selected").val();
     var employeddate = $('#AddContent input[name="AddEmployedDate"]').val();
+    //if (!WorkerExists(id))
     confirm_ = confirm('This action will add one new worker informatiom!' + "\n" + 'Are you sure?');
     if (confirm_) {
         var workerData = '{"Id":"' + id + '","Name":"' + name + '","Gender":"' + gender + '","Age":"' + age + '","Department":"' + department + '","Position":"' + position + '","EmployedDate":"' + employeddate + '"}';

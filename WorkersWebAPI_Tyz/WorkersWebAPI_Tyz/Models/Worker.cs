@@ -15,9 +15,9 @@ namespace WorkersWebAPI_Tyz.Models
         public string Name { get; set; }
         [Required]
         public string Gender { get; set; }//female or male
-        [Required]
+        //[Required]
         [Range(18, 60,ErrorMessage ="Age must be between 18-60")]
-        public byte Age { get; set; }//补充：必须是整数
+        public byte? Age { get; set; }//补充：必须是整数?表示可null
         [Required]
         public string Department { get; set; }//指定范围内选择
         [Required]
