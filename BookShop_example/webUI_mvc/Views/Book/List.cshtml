@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BookShop.Domain.Entities.Book>
+
+@{
+    ViewBag.Title = "Books_examples";
+}
+<div>
+    <h4>BookList</h4>
+    <hr />
+
+    <table class="table">
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Title)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Isbn)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Summary)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Author)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Price)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Published)
+            </td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr style="border-bottom:1px dashed silver;">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                   @Html.DisplayFor(modelItem => item.Price)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
