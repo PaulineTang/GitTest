@@ -7,7 +7,7 @@ namespace WebApplication1.Models
 {
     public class Issue
     {
-        public string Id;
-        public string str = "This is one Issue.";
+        public string Id { get; set; }
+        public string str { get; }
     }
 }
