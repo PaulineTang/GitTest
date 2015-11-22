@@ -62,7 +62,7 @@ namespace MVC_WebApplication.Tests.Controllers
 
             // Act
             //ViewResult result = controller.About() as ViewResult;
-            //ViewResult result = controller.About();
+            ViewResult result = controller.About();
 
             // Assert
             Assert.AreEqual("Your application description page.", result.ViewBag.Message);
